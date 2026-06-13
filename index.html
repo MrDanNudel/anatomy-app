@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>לימוד שרירים</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>לימוד ושינון שרירים</h1>
+
+        <p>מוצא • אחז • פעולה</p>
+      </header>
+
+      <div class="filter-bar">
+        <button onclick="setFilter('all')">הכל</button>
+        <button onclick="setFilter('easy')">קלות</button>
+        <button onclick="setFilter('hard')">קשות</button>
+        <button onclick="setFilter('unmarked')">לא סומנו</button>
+      </div>
+
+      <section class="card">
+        <div class="top-row">
+          <span id="progressText">שריר 1 מתוך 1</span>
+          <span id="levelBadge">לא סומן</span>
+        </div>
+
+        <h2 id="muscleName">שם השריר</h2>
+
+        <div class="image-box">
+          <img id="muscleImage" src="" alt="תמונה של שריר" />
+        </div>
+
+        <div id="answerBox" class="answer-box">
+          <p>
+            <strong class="origin-label">📍 Origin:</strong>
+            <span id="originText"></span>
+          </p>
+
+          <p>
+            <strong class="insertion-label">🔗 Insertion:</strong>
+            <span id="insertionText"></span>
+          </p>
+
+          <p>
+            <strong class="action-label">⚡ Action:</strong>
+            <span id="actionText"></span>
+          </p>
+
+          <p>
+            <strong class="exercise-label">🏋️ Recommended Exercises:</strong>
+            <span id="exerciseText"></span>
+          </p>
+        </div>
+      </section>
+
+      <div class="progress-container">
+        <div id="progressBar"></div>
+      </div>
+    </main>
+
+    <script src="data/muscle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
