@@ -4,7 +4,7 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Gluteus Maximus",
     answer:
-      "Origin: Gluteal surface of Ilium, posterior surface of Sacrum and coccyx,sacrotuberal ligament. Thoracolumber facia. Insertion: Iliotibial Tract, Gluteal Tuberosity. Actions: Hip Extension, External Rotation, Assists Hip Abduction and adduction.",
+      "Origin: Gluteal Surface of Ilium, Posterior Surface of Sacrum and Coccyx, Sacrotuberous Ligament, Thoracolumbar Fascia. Insertion: Iliotibial Tract and Gluteal Tuberosity of Femur. Actions: Hip Extension, External Rotation. Superior Fibers Assist Hip Abduction; Inferior Fibers Assist Hip Adduction.",
 
     recommendedExercises:
       "Hip Thrust, Barbell Squat, Romanian Deadlift, Bulgarian Split Squat, Step-Up",
@@ -23,25 +23,29 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Gluteus Medius",
     answer:
-      "Origin: External Surface of Ilium. Insertion: Lateral surface of the greater trochanter of the femur. Actions: Hip Abduction(primary action) and stabilization,flextion and Internal Rotation of hip, extension and external rotation of the hip.",
+      "Origin: Gluteal Surface of Ilium between the Anterior and Posterior Gluteal Lines, Gluteal Aponeurosis. Insertion: Lateral Surface of Greater Trochanter of Femur. Actions: Hip Abduction, Pelvic Stabilization during Walking. Anterior Fibers Assist Hip Flexion and Internal Rotation; Posterior Fibers Assist Hip Extension and External Rotation.",
+
     recommendedExercises:
-      "Side-Lying Hip Abduction, Clamshell, Banded Lateral Walk, Single-Leg Squat, Hip Hike",
+      "Side-Lying Hip Abduction, Banded Lateral Walk, Clamshell, Single-Leg Squat, Hip Hike",
 
     images: [
       "images/muscles/gluteus-medius.png",
       "images/muscles/gluteus-medius1.png",
       "images/muscles/gluteus-medius2.png",
+      "images/muscles/gluteus-medius3.png",
+      "images/muscles/gluteus-medius4.png",
     ],
   },
-
   {
     id: "lower-3",
     subtopic: "פלג גוף תחתון",
     q: "Gluteus Minimus",
     answer:
-      "Origin: External Surface of Ilium. Insertion: Greater Trochanter. Actions: Hip Abduction,Assists hip flexion, Internal Rotation, Pelvic Stabilization.",
+      "Origin: Gluteal Surface of Ilium between the Anterior and Inferior Gluteal Lines. Insertion: Anterior Surface of Greater Trochanter of Femur and Hip Joint Capsule. Actions: Hip Abduction, Internal Rotation, Pelvic Stabilization during Walking, Stabilizes the Hip Joint Capsule.",
+
     recommendedExercises:
-      "Side-Lying Hip Abduction, Clamshell, Monster Walk, Single-Leg Balance, Cable Hip Abduction",
+      "Side-Lying Hip Abduction, Banded Lateral Walk, Clamshell, Single-Leg Balance, Hip Hike",
+
     images: [
       "images/muscles/gluteus-minimus.png",
       "images/muscles/gluteus-minimus1.png",
@@ -55,9 +59,10 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Piriformis",
     answer:
-      "Origin: Anterior Sacrum (usually S2–S4). Insertion: Greater Trochanter. Actions: External Rotation and Hip Abduction.",
+      "Origin: Anterior Surface of Sacrum, usually from S2-S4, and Sacrotuberous Ligament. Insertion:Greater Trochanter of Femur. Actions: Hip External Rotation when the Hip is Extended, Hip Abduction when the Hip is Flexed, Stabilizes the Hip Joint.",
+
     recommendedExercises:
-      "Clamshell, Banded External Rotation, Fire Hydrant, Seated Hip External Rotation, Single-Leg Glute Bridge.",
+      "Clamshell, Banded External Rotation, Fire Hydrant, Seated Hip External Rotation, Single-Leg Glute Bridge",
 
     images: [
       "images/muscles/piriformis.png",
@@ -71,9 +76,11 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Quadratus Femoris",
     answer:
-      "Origin: Ischial Tuberosity. Insertion:Quadrate tubercle on the intertrochanteric crest of the femur. Actions: External Rotation of the Hip,Assists hip adduction,Stabilizes the femoral head in the acetabulum",
+      "Origin: Lateral Border of Ischial Tuberosity. Insertion:intertrochanteric Crest of Femur. Actions: Hip External Rotation, Assists Hip Adduction, Stabilizes the Femoral Head in the Acetabulum.",
+
     recommendedExercises:
-      "Clamshell, Banded Hip External Rotation, Cable Hip External Rotation, Fire Hydrant, Single-Leg Glute Bridge.",
+      "Clamshell, Banded Hip External Rotation, Cable Hip External Rotation, Fire Hydrant, Single-Leg Glute Bridge",
+
     images: [
       "images/muscles/quadratus-femoris.png",
       "images/muscles/quadratus-femoris1.png",
@@ -86,9 +93,11 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Obturator Internus",
     answer:
-      "Origin: Deep aspect of Obturator Membrane. Insertion: Greater Trochanter. Actions: External Rotation, Hip Abduction.",
+      "Origin: Pelvic Surface of Obturator Membrane and Surrounding Margins of Obturator Foramen. Insertion: Medial Surface of Greater Trochanter of Femur. Actions: Hip External Rotation when the Hip is Extended, Hip Abduction when the Hip is Flexed, Stabilizes the Femoral Head in the Acetabulum.",
+
     recommendedExercises:
       "Cable Hip External Rotation, Banded Hip External Rotation, Clamshell, Fire Hydrant, Single-Leg Glute Bridge.",
+
     images: [
       "images/muscles/obturator-internus.png",
       "images/muscles/obturator-internus1.png",
@@ -101,10 +110,10 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Obturator Externus",
     answer:
-      "Origin: Obturator Membrane and Surrounding Bone. Insertion: Trochanteric Fossa. Actions: External Rotation of the Hip. Assists hip adduction",
+      "Origin: External Surface of Obturator Membrane and Surrounding Margins of Obturator Foramen. Insertion: Trochanteric Fossa of Femur. Actions: Hip External Rotation, Assists Hip Adduction, Stabilizes the Femoral Head in the Acetabulum.",
 
     recommendedExercises:
-      " Recommended Exercises: Clamshell, Cable Hip External Rotation, Banded Hip External Rotation, Seated Hip External Rotation, Fire Hydrant.",
+      "Clamshell, Cable Hip External Rotation, Banded Hip External Rotation, Seated Hip External Rotation, Fire Hydrant.",
 
     images: [
       "images/muscles/obturator-externus.png",
@@ -112,15 +121,16 @@ const musclesData = [
       "images/muscles/obturator-externus2.png",
     ],
   },
-
   {
     id: "lower-8",
     subtopic: "פלג גוף תחתון",
     q: "Gemellus",
     answer:
-      "Origin: Superior Gemellus - Ischial Spine; Inferior Gemellus - Upper Part of Ischial Tuberosity. Insertion: Medial Surface of Greater Trochanter via Obturator Internus Tendon. Actions: External Rotation, Assists Hip Abduction when Hip is Flexed, Stabilization of Femoral Head.",
+      "Origin: Superior Gemellus - Ischial Spine; Inferior Gemellus - Upper Part of Ischial Tuberosity. Insertion: Medial Surface of Greater Trochanter of Femur via the Tendon of Obturator Internus. Actions: Hip External Rotation when the Hip is Extended, Assists Hip Abduction when the Hip is Flexed, Stabilizes the Femoral Head in the Acetabulum.",
+
     recommendedExercises:
       "Clamshell, Fire Hydrant, Banded Hip External Rotation, Cable Hip External Rotation, 90/90 External Rotation Lift-Off.",
+
     images: [
       "images/muscles/gemellus.png",
       "images/muscles/gemellus1.png",
@@ -130,11 +140,15 @@ const musclesData = [
   },
 
   {
-    id: "lower-10",
+    id: "lower-9",
     subtopic: "פלג גוף תחתון",
     q: "Iliopsoas",
     answer:
-      "Origin: Iliacus - Iliac Fossa; Psoas Major - Bodies and Intervertebral Discs of T12-L5 Vertebrae. Insertion: Lesser Trochanter of Femur. Actions: Hip Flexion, External Rotation, Trunk Flexion.",
+      "Origin: Iliacus - Iliac Fossa, Inner Lip of Iliac Crest, Ala of Sacrum, and Anterior Sacroiliac Ligaments; Psoas Major - Bodies and Intervertebral Discs of T12-L5 Vertebrae. Insertion: Lesser Trochanter of Femur via a Common Tendon. Actions: Primary Hip Flexion, Assists Hip External Rotation, Trunk Flexion when the Femur is Fixed, Lateral Flexion of the Trunk, Anterior Pelvic Tilt, Stabilizes the Lumbar Spine and Hip Joint.",
+
+    recommendedExercises:
+      "Hanging Knee Raise, Seated Hip Flexion, Standing Cable Hip Flexion, Dead Bug, Mountain Climber, Lying Leg Raise.",
+
     images: [
       "images/muscles/iliopsoas.png",
       "images/muscles/iliopsoas1.png",
@@ -143,13 +157,13 @@ const musclesData = [
       "images/muscles/iliopsoas4.png",
     ],
   },
-
   {
-    id: "lower-11",
+    id: "lower-10",
     subtopic: "פלג גוף תחתון",
     q: "Psoas Minor",
     answer:
-      "Origin: Bodies and Intervertebral Disc of T12-L1 Vertebrae. Insertion: Iliopubic Eminence and Iliac Fascia. Actions: Weak Trunk Flexion, Tenses Iliac Fascia.",
+      "Origin: Bodies of T12-L1 Vertebrae and Intervertebral Disc between T12 and L1. Insertion: Iliopubic Eminence, Pectineal Line of Pubis, and Iliac Fascia. Actions: Weak Trunk Flexion, Assists Posterior Pelvic Tilt, Tenses Iliac Fascia, Stabilizes the Lumbar Spine.",
+
     recommendedExercises:
       "Sit-Up, Crunch, Cable Crunch, Dead Bug, Hollow Body Hold.",
 
@@ -159,11 +173,12 @@ const musclesData = [
     ],
   },
   {
-    id: "lower-12",
+    id: "lower-11",
     subtopic: "פלג גוף תחתון",
     q: "Tensor Fasciae Latae",
     answer:
-      "Origin: ASIS and Anterior Part of Iliac Crest. Insertion: Iliotibial Tract. Actions: Hip Flexion, Hip Abduction, Internal Rotation, Pelvic Stabilization.",
+      "Origin: Anterior Superior Iliac Spine (ASIS) and Anterior Part of Iliac Crest. Insertion: Iliotibial Tract, which attaches to the Lateral Condyle of Tibia at Gerdy's Tubercle. Actions: Hip Flexion, Hip Abduction, Hip Internal Rotation, Tenses the Fascia Lata and Iliotibial Tract, Assists Pelvic Stabilization during Walking, Helps Stabilize the Knee in Extension.",
+
     recommendedExercises:
       "Standing Cable Hip Abduction, Side-Lying Hip Abduction, Monster Walk, Banded Lateral Walk, Single-Leg Squat.",
 
@@ -173,31 +188,35 @@ const musclesData = [
       "images/muscles/tensor-fasciae-latae2.png",
     ],
   },
-
   {
-    id: "lower-13",
+    id: "lower-12",
     subtopic: "פלג גוף תחתון",
     q: "Quadriceps Femoris",
     answer:
-      "Origin: Rectus Femoris - AIIS and Superior Acetabular Rim; Vastus Lateralis - Greater Trochanter and Linea Aspera; Vastus Medialis - Intertrochanteric Line and Linea Aspera; Vastus Intermedius - Anterior and Lateral Femoral Shaft. Insertion: Tibial Tuberosity via Quadriceps Tendon, Patella and Patellar Ligament. Actions: Knee Extension; Rectus Femoris also performs Hip Flexion.",
+      "Origin: Rectus Femoris - Anterior Inferior Iliac Spine (AIIS) and Superior Acetabular Rim; Vastus Lateralis - Greater Trochanter, Gluteal Tuberosity, Lateral Lip of Linea Aspera, and Lateral Intermuscular Septum; Vastus Medialis - Intertrochanteric Line, Medial Lip of Linea Aspera, Medial Supracondylar Line,; Vastus Intermedius - Anterior and Lateral Surfaces of Femoral Shaft. Insertion: Base of Patella via Quadriceps Tendon, then Tibial Tuberosity via Patellar Ligament; also contributes to Medial and Lateral Patellar Retinacula. Actions: Knee Extension. Rectus Femoris also assists Hip Flexion; Vastus Medialis helps stabilize the Patella medially; Vastus Lateralis helps stabilize the Patella laterally.",
+
     recommendedExercises:
       "Back Squat, Front Squat, Leg Press, Bulgarian Split Squat, Leg Extension.",
+
     images: [
       "images/muscles/quadriceps-femoris.png",
+      "images/muscles/quadriceps-femoris6.png",
+      "images/muscles/quadriceps-femoris7.png",
+      "images/muscles/quadriceps-femoris8.png",
+      "images/muscles/quadriceps-femoris5.png",
+      "images/muscles/quadriceps-femoris9.png",
       "images/muscles/quadriceps-femoris1.png",
       "images/muscles/quadriceps-femoris2.png",
       "images/muscles/quadriceps-femoris3.png",
       "images/muscles/quadriceps-femoris4.png",
-      "images/muscles/quadriceps-femoris5.png",
     ],
   },
-
   {
-    id: "lower-14",
+    id: "lower-13",
     subtopic: "פלג גוף תחתון",
     q: "Sartorius",
     answer:
-      "Origin: Anterior Superior Iliac Spine (ASIS). Insertion: Superior Medial Surface of Tibia (Pes Anserinus). Actions: Hip Flexion, Hip Abduction, Hip External Rotation, Knee Flexion, Assists Knee Internal Rotation when the Knee is Flexed.",
+      "Origin: Anterior Superior Iliac Spine (ASIS). Insertion: pes anserinus . Actions: Hip Flexion, Hip Abduction, Hip External Rotation, Knee Flexion, Assists Knee Internal Rotation when the Knee is Flexed.",
     recommendedExercises:
       "Standing Cable Hip Flexion, Hanging Knee Raises, High-Knee Marches, Resistance Band Hip Flexion, Mountain Climbers.",
     images: [
@@ -206,13 +225,12 @@ const musclesData = [
       "images/muscles/sartorius2.png",
     ],
   },
-
   {
-    id: "lower-15",
+    id: "lower-14",
     subtopic: "פלג גוף תחתון",
     q: "Biceps Femoris",
     answer:
-      "Origin: Long Head - Ischial Tuberosity. Short Head - Linea Aspera and Lateral Supracondylar Line of Femur. Insertion: Head of Fibula. Actions: Knee Flexion, Knee External Rotation when the Knee is Flexed; Long Head also performs Hip Extension.",
+      "Origin: Long Head - Ischial Tuberosity. Short Head - Linea Aspera and Lateral Supracondylar Line of Femur. Insertion:Head of Fibula, with some fibers attaching to the Lateral Condyle of Tibia. Actions: Knee Flexion, Knee External Rotation when the Knee is Flexed; Long Head also performs Hip Extension.",
     recommendedExercises:
       "Romanian Deadlift, Nordic Hamstring Curl, Leg Curl, Glute-Ham Raise, Good Morning.",
     images: [
@@ -223,11 +241,11 @@ const musclesData = [
     ],
   },
   {
-    id: "lower-16",
+    id: "lower-15",
     subtopic: "פלג גוף תחתון",
     q: "Semitendinosus",
     answer:
-      "Origin: Ischial Tuberosity. Insertion: Superior Medial Surface of Tibia (Pes Anserinus). Actions: Hip Extension, Knee Flexion, Knee Internal Rotation when the Knee is Flexed.",
+      "Origin: Ischial Tuberosity. Insertion: inferior to the mideal condyle of tibia. Actions: Hip Extension, Knee Flexion,PPT,Knee Internal Rotation when the Knee is Flexed, Assists Pelvic Stabilization.",
     recommendedExercises:
       "Romanian Deadlift, Nordic Hamstring Curl, Leg Curl, Glute-Ham Raise, Good Morning.",
     images: [
@@ -241,7 +259,7 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Semimembranosus",
     answer:
-      "Origin: Ischial Tuberosity. Insertion:Medial Condyle of Tibia. Actions: Hip Extension, Knee Flexion, Knee Internal Rotation when the Knee is Flexed.",
+      "Origin: Ischial Tuberosity. Insertion: Posterior Aspect of the Medial Condyle of Tibia, with an expansion to the Oblique Popliteal Ligament. Actions: Hip Extension, Knee Flexion, Knee Internal Rotation when the Knee is Flexed, Assists Knee Stabilization.",
     recommendedExercises:
       "Romanian Deadlift, Nordic Hamstring Curl, Leg Curl, Glute-Ham Raise, Good Morning.",
     images: [
@@ -256,103 +274,175 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Adductor Longus",
     answer:
-      "Origin: Body of Pubis Inferior to the Pubic Crest. Insertion: Middle Third of Linea Aspera of Femur. Actions: Hip Adduction, Assists Hip Flexion, Assists Hip Internal Rotation.",
+      "Origin: Superior ramus Pubis. Insertion:Linea Aspera of Femur. Actions: Hip Adduction, Assists Hip Flexion, Assists Hip Internal Rotation.",
     recommendedExercises:
       "Hip Adduction Machine, Cable Hip Adduction, Copenhagen Plank, Sumo Squat, Lateral Lunges.",
     images: [
       "images/muscles/adductor-longus.png",
       "images/muscles/adductor-longus1.png",
+      "images/muscles/adductor-longus2.png",
+      "images/muscles/adductor-longus3.png",
     ],
   },
 
   {
-    id: "lower-22",
+    id: "lower-19",
     subtopic: "פלג גוף תחתון",
     q: "Adductor Brevis",
     answer:
-      "Origin: Pubis. Insertion: Linea Aspera. Actions: Hip Adduction, Hip Flexion.",
-    image: "images/muscles/adductor-brevis.png",
+      "Origin: Body and Inferior Ramus of Pubis. Insertion: posterior femur Linea Aspera. Actions: Hip Adduction, Assists Hip Flexion,",
+    recommendedExercises:
+      "Hip Adduction Machine, Cable Hip Adduction, Copenhagen Plank, Sumo Squat, Lateral Lunges.",
+    images: [
+      "images/muscles/adductor-brevis.png",
+      "images/muscles/adductor-brevis1.png",
+    ],
   },
-
   {
-    id: "lower-23",
+    id: "lower-20",
     subtopic: "פלג גוף תחתון",
     q: "Adductor Magnus",
     answer:
-      "Origin: Inferior Ramus of Pubis, Ischial Ramus, Ischial Tuberosity. Insertion: Linea Aspera, Adductor Tubercle. Actions: Hip Adduction, Hip Extension.",
-    image: "images/muscles/adductor-magnus.png",
+      "Origin: Inferior Ramus of Pubis, and Ischial Tuberosity. Insertion:Linea Aspera,and Adductor Tubercle. Actions: Hip Adduction; Hamstring Part assists Hip Extension.",
+    recommendedExercises:
+      "Hip Adduction Machine, Cable Hip Adduction, Copenhagen Plank, Sumo Squat, Romanian Deadlift.",
+    images: ["images/muscles/adductor-magnus.png"],
   },
-
   {
-    id: "lower-24",
+    id: "lower-22",
     subtopic: "פלג גוף תחתון",
     q: "Gracilis",
     answer:
-      "Origin: Pubis. Insertion: Pes Anserinus. Actions: Hip Adduction, Knee Flexion, Internal Rotation.",
-    image: "images/muscles/gracilis.png",
+      "Origin: Body and Inferior Ramus of Pubis. Insertion:medial condyle of the tibia. Actions: Hip Adduction, Knee Flexion,hip flextion, Knee Internal Rotation when the Knee is Flexed.",
+    recommendedExercises:
+      "Hip Adduction Machine, Cable Hip Adduction, Copenhagen Plank, Sumo Squat, Side-Lying Hip Adduction.",
+    images: [
+      "images/muscles/gracilis.png",
+      "images/muscles/gracilis1.png",
+      "images/muscles/gracilis2.png",
+    ],
+  },
+  {
+    id: "lower-23",
+    subtopic: "פלג גוף תחתון",
+    q: "Pectineus",
+    answer:
+      "Origin: Superior Ramus of Pubis, specifically the Pecten Pubis. Insertion: Pectineal Line of Femur. Actions: Hip Adduction, Hip Flexion, Assists Hip Internal Rotation.",
+    recommendedExercises:
+      "Hip Adduction Machine, Cable Hip Adduction, Copenhagen Plank, Sumo Squat, Standing Cable Hip Flexion.",
+    images: ["images/muscles/pectineus.png"],
+  },
+  {
+    id: "lower-24",
+    subtopic: "פלג גוף תחתון",
+    q: "Tibialis Anterior",
+    answer:
+      "Origin: Lateral Condyle of Tibia, and Interosseous Membrane. Insertion: Medial Cuneiform and Base of the First Metatarsal. Actions: Ankle Dorsiflexion, Foot Inversion, Supports the Medial Longitudinal Arch, Controls Foot Lowering during Gait.",
+    recommendedExercises:
+      "Tibialis Raises, Resistance Band Dorsiflexion, Heel Walks, Standing Wall Tib Raises, Resistance Band Inversion.",
+    images: [
+      "images/muscles/tibialis-anterior.png",
+      "images/muscles/tibialis-anterior1.png",
+      "images/muscles/tibialis-anterior2.png",
+      "images/muscles/tibialis-anterior3.png",
+    ],
   },
 
   {
     id: "lower-25",
     subtopic: "פלג גוף תחתון",
-    q: "Pectineus",
+    q: "Extensor Digitorum Longus",
     answer:
-      "Origin: Superior Ramus of Pubis. Insertion: Pectineal Line of Femur. Actions: Hip Adduction, Hip Flexion.",
-    image: "images/muscles/pectineus.png",
+      "Origin: Lateral Condyle of Tibia,head of Fibula,interoseseous membrane. Insertion:inserting into the Middle and Distal Phalanges of Toes 2-5,. Actions: Extension of Toes 2-5, Ankle Dorsiflexion, Assists Foot Eversion.",
+    recommendedExercises:
+      "Resistance Band Toe Extension, Resistance Band Dorsiflexion, Heel Walks, Toe Raises, Ankle Dorsiflexion Machine.",
+    images: [
+      "images/muscles/extensor-digitorum-longus.png",
+      "images/muscles/extensor-digitorum-longus1.png",
+      "images/muscles/extensor-digitorum-longus2.png",
+      "images/muscles/extensor-digitorum-longus3.png",
+      "images/muscles/extensor-digitorum-longus4.png",
+    ],
   },
 
   {
     id: "lower-26",
     subtopic: "פלג גוף תחתון",
-    q: "Tibialis Anterior",
-    answer:
-      "Origin: Lateral Tibia. Insertion: Medial Cuneiform, Base of First Metatarsal. Actions: Dorsiflexion, Inversion.",
-    image: "images/muscles/tibialis-anterior.png",
-  },
-
-  {
-    id: "lower-27",
-    subtopic: "פלג גוף תחתון",
-    q: "Extensor Digitorum Longus",
-    answer:
-      "Origin: Lateral Condyle of Tibia, Anterior Fibula, Interosseous Membrane. Insertion: Middle and Distal Phalanges of Toes 2-5. Actions: Extension of Toes 2-5, Dorsiflexion.",
-    image: "images/muscles/extensor-digitorum-longus.png",
-  },
-
-  {
-    id: "lower-28",
-    subtopic: "פלג גוף תחתון",
     q: "Extensor Hallucis Longus",
     answer:
-      "Origin: Anterior Fibula, Interosseous Membrane. Insertion: Distal Phalanx of Big Toe. Actions: Extension of Big Toe, Dorsiflexion.",
-    image: "images/muscles/extensor-hallucis-longus.png",
+      "Origin: shaft of Fibula and Interosseous Membrane. Insertion: Distal Phalanx of the Big Toe. Actions: Extension of the Big Toe, Ankle Dorsiflexion, Assists Foot Inversion.",
+    recommendedExercises:
+      "Resistance Band Big Toe Extension, Resistance Band Dorsiflexion, Heel Walks, Toe Raises, Ankle Dorsiflexion Machine.",
+    images: [
+      "images/muscles/extensor-hallucis-longus.png",
+      "images/muscles/extensor-hallucis-longus1.png",
+      "images/muscles/extensor-hallucis-longus2.png",
+      "images/muscles/extensor-hallucis-longus3.png",
+      "images/muscles/extensor-hallucis-longus4.png",
+    ],
   },
-
   {
     id: "lower-29",
     subtopic: "פלג גוף תחתון",
     q: "Fibularis Longus",
     answer:
-      "Origin: Head and Upper Lateral Fibula. Insertion: Base of First Metatarsal, Medial Cuneiform. Actions: Eversion, Plantar Flexion.",
-    image: "images/muscles/fibularis-longus.png",
+      "Origin: Head AND lateral surface of Fibula. Insertion: Base of the  First Metatarsal and Medial Cuneiform. Actions: Foot Eversion, Assists Ankle Plantar Flexion, Supports the Transverse Arch and Lateral Longitudinal Arch of the Foot.",
+    recommendedExercises:
+      "Resistance Band Eversion, Standing Calf Raises, Single-Leg Balance, Lateral Hops, Ankle Stability Drills.",
+    images: [
+      "images/muscles/fibularis-longus.png",
+      "images/muscles/fibularis-longus1.png",
+      "images/muscles/fibularis-longus2.png",
+      "images/muscles/fibularis-longus3.png",
+    ],
   },
-
   {
     id: "lower-30",
     subtopic: "פלג גוף תחתון",
     q: "Fibularis Brevis",
     answer:
-      "Origin: Lower Lateral Fibula. Insertion: Base of Fifth Metatarsal. Actions: Eversion, Plantar Flexion.",
-    image: "images/muscles/fibularis-brevis.png",
+      "Origin: Two-Thirds of shaft of Fibula. Insertion: Base of the Fifth Metatarsal. Actions: Foot Eversion, Assists Ankle Plantar Flexion.",
+    recommendedExercises:
+      "Resistance Band Eversion, Side-Lying Ankle Eversion, Single-Leg Balance, Lateral Hops, Ankle Stability Drills.",
+    images: ["images/muscles/fibularis-brevis.png"],
+  },
+
+  {
+    id: "lower-31",
+    subtopic: "פלג גוף תחתון",
+    q: "Soleus",
+    answer:
+      "Origin: Posterior Head and Proximal Posterior Surface of Fibula, Soleal Line and Medial Border of Tibia. Insertion: Calcaneus tuberosity via the Calcaneal Tendon (Achilles Tendon). Actions: Ankle Plantar Flexion, especially when the Knee is Flexed, Postural Stabilization during Standing.",
+    recommendedExercises:
+      "Seated Calf Raise, Bent-Knee Calf Raise, Single-Leg Seated Calf Raise, Wall Sit Calf Raise, Donkey Calf Raise with Bent Knees.",
+    images: [
+      "images/muscles/soleus.png",
+      "images/muscles/soleus7.png",
+      "images/muscles/soleus1.png",
+      "images/muscles/soleus2.png",
+      "images/muscles/soleus3.png",
+      "images/muscles/soleus4.png",
+      "images/muscles/soleus5.png",
+      "images/muscles/soleus6.png",
+    ],
   },
 
   {
     id: "lower-32",
     subtopic: "פלג גוף תחתון",
-    q: "Soleus",
+    q: "Gastrocnemius",
     answer:
-      "Origin: Head of Fibula, Soleal Line of Tibia. Insertion: Calcaneal Tuberosity via Achilles Tendon. Actions: Plantar Flexion.",
-    image: "images/muscles/Triceps-Surae.png",
+      "Origin: Medial Head - Posterior Surface of Medial epiCondyle of Femur. Lateral Head - Posterior Surface of Lateral epiCondyle of Femur. Insertion: Posterior Surface of Calcaneus via the Calcaneal Tendon (Achilles Tendon). Actions: Ankle Plantar Flexion, especially when the Knee is Extended; Assists Knee Flexion; Helps with Propulsion during Walking, Running, and Jumping.",
+    recommendedExercises:
+      "Standing Calf Raise, Single-Leg Standing Calf Raise, Donkey Calf Raise, Jump Rope, Sprinting, Box Jumps.",
+    images: [
+      "images/muscles/gastrocnemius.png",
+      "images/muscles/gastrocnemius1.png",
+      "images/muscles/gastrocnemius2.png",
+      "images/muscles/gastrocnemius3.png",
+      "images/muscles/gastrocnemius4.png",
+      "images/muscles/gastrocnemius5.png",
+    ],
   },
 
   {
@@ -360,8 +450,18 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Plantaris",
     answer:
-      "Origin: Lateral Supracondylar Line of Femur. Insertion: Calcaneal Tuberosity via Achilles Tendon. Actions: Assists Plantar Flexion and Knee Flexion.",
-    image: "images/muscles/plantaris.png",
+      "Origin:Lateral epicondyle of the femur. Insertion: Posterior Surface of Calcaneus, often via or near the Calcaneal Tendon (Achilles Tendon). Actions: Weak Ankle Plantar Flexion, Weak Knee Flexion, Assists Proprioception of the Ankle and Knee.",
+    recommendedExercises:
+      "Standing Calf Raise, Seated Calf Raise, Single-Leg Calf Raise, Jump Rope, Balance Drills.",
+    images: [
+      "images/muscles/plantaris.png",
+      "images/muscles/plantaris1.png",
+      "images/muscles/plantaris2.png",
+      "images/muscles/plantaris3.png",
+      "images/muscles/plantaris4.png",
+      "images/muscles/plantaris5.png",
+      "images/muscles/plantaris6.png",
+    ],
   },
 
   {
@@ -369,7 +469,7 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Tibialis Posterior",
     answer:
-      "Origin: Posterior Tibia, Posterior Fibula, Interosseous Membrane. Insertion: Navicular, Cuneiforms, Cuboid, Bases of Metatarsals 2-4. Actions: Inversion, Plantar Flexion, Supports Medial Longitudinal Arch.",
+      "Origin: Posterior Tibia, Posterior Fibula, Interosseous Membrane. Insertion: Navicular, Cuneiforms,Bases of Metatarsals 2-4. Actions: Inversion, Plantar Flexion, Supports Medial Longitudinal Arch.",
     image: "images/muscles/tibialis-posterior.png",
   },
 
@@ -378,7 +478,7 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Flexor Hallucis Longus",
     answer:
-      "Origin: Posterior Fibula, Interosseous Membrane. Insertion: Distal Phalanx of Hallux. Actions: Flexion of Hallux, Plantar Flexion.",
+      "Origin: 2/3 Posterior Shaft of Fibula. Insertion: Distal Phalanx of Hallux. Actions: Flexion of Hallux, Plantar Flexion,inversion",
     image: "images/muscles/flexor-hallucis-longus.png",
   },
 
@@ -396,25 +496,7 @@ const musclesData = [
     subtopic: "פלג גוף תחתון",
     q: "Popliteus",
     answer:
-      "Origin: Lateral Femoral Condyle. Insertion: Posterior Tibia. Actions: Initiates Knee Flexion, Internal Rotation of Tibia.",
+      "Origin: Lateral Femoral epicondyle Insertion: Posterior infirior medial condylde of Tibia. Actions:Knee Flexion, Internal Rotation of Tibia.",
     image: "images/muscles/popliteus.png",
-  },
-
-  {
-    id: "lower-38",
-    subtopic: "פלג גוף תחתון",
-    q: "Quadriceps Femoris",
-    answer:
-      "Includes: Rectus Femoris, Vastus Lateralis, Vastus Medialis, Vastus Intermedius. Primary Action: Knee Extension. Rectus Femoris also performs Hip Flexion.",
-    image: "images/muscles/quadriceps-femoris.png",
-  },
-
-  {
-    id: "lower-39",
-    subtopic: "פלג גוף תחתון",
-    q: "Triceps Surae",
-    answer:
-      "Includes: Gastrocnemius (Medial and Lateral Heads) and Soleus. Common Insertion: Achilles Tendon to Calcaneal Tuberosity. Primary Action: Plantar Flexion.",
-    image: "images/muscles/triceps-surae.png",
   },
 ];

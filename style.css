@@ -154,6 +154,70 @@ button {
   font-weight: bold;
 }
 
+.topic-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#topicSelect {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 16px;
+  min-width: 280px;
+  cursor: pointer;
+}
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.filter-bar button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-bar button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+.status-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+
+  transition: all 0.25s ease;
+}
+.random-btn {
+  background: linear-gradient(135deg, #3b82f6, #22c55e) !important;
+}
+#topicSelect option {
+  color: black;
+}
+.reset-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+
+  color: white;
+}
+
+.reset-btn:hover {
+  transform: translateY(-1px);
+}
 button:hover {
   transform: translateY(-2px);
 }

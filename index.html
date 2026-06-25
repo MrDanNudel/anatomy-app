@@ -10,9 +10,21 @@
   <body>
     <main class="app">
       <header class="hero">
-        <h1>לימוד ושינון שרירים</h1>
-
-        <p>מוצא • אחז • פעולה</p>
+        <h1>לימוד ושינון אנטומיה</h1>
+        <p>שרירים • עצמות • רצועות</p>
+        <div class="topic-selector">
+          <select id="topicSelect">
+            <option value="general">כללי</option>
+            <option value="respiratorySystem">מערכת הנשימה</option>
+            <option value="nervousSystem">מערכת העצבים</option>
+            <option value="lowerBodyMuscles">שרירים - פלג גוף תחתון</option>
+            <option value="lowerBodyBones">עצמות - פלג גוף תחתון</option>
+            <option value="lowerBodyLigaments">
+              רצועות ומייצבי מפרקים - פלג גוף תחתון
+            </option>
+            <option value="footbones">עצמות - כף רגל</option>
+          </select>
+        </div>
       </header>
 
       <div class="filter-bar">
@@ -20,12 +32,16 @@
         <button onclick="setFilter('easy')">קלות</button>
         <button onclick="setFilter('hard')">קשות</button>
         <button onclick="setFilter('unmarked')">לא סומנו</button>
+
+        <button id="randomBtn" class="random-btn">רנדומלי</button>
+
+        <button id="resetBtn" class="reset-btn">איפוס</button>
       </div>
 
       <section class="card">
         <div class="top-row">
           <span id="progressText">שריר 1 מתוך 1</span>
-          <span id="levelBadge">לא סומן</span>
+          <span id="levelBadge" class="status-dot"></span>
         </div>
 
         <h2 id="muscleName">שם השריר</h2>
@@ -61,8 +77,13 @@
         <div id="progressBar"></div>
       </div>
     </main>
-
+    <script src="data/nervousSystem.js"></script>
+    <script src="data/respiratorySystem.js"></script>
+    <script src="data/lowerBodyLigaments.js"></script>
+    <script src="data/general.js"></script>
     <script src="data/muscle.js"></script>
+    <script src="data/lowerBodyBones.js"></script>
+    <script src="data/foot.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
