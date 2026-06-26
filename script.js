@@ -6,6 +6,7 @@ const banks = {
   lowerBodyLigaments: lowerBodyLigamentsData,
   respiratorySystem: respiratorySystemData,
   nervousSystem: nervousSystemData,
+  circulatorySystem: circulatorySystemData,
 };
 
 let isRandomMode = false;
@@ -16,6 +17,8 @@ let currentFilter = "all";
 let currentBank = [...allMuscles];
 let currentIndex = 0;
 let answerVisible = false;
+
+let currentLanguage = localStorage.getItem("studyLanguage") || "en";
 
 const muscleName = document.getElementById("muscleName");
 const muscleImage = document.getElementById("muscleImage");
@@ -43,25 +46,89 @@ function shuffleArray(array) {
 
 function splitAnswer(answer = "") {
   const origin = answer.match(
-    /Origin:\s*(.*?)(?=Insertion:|Actions:|Action:|$)/i,
+    /(Origin|התחלה):\s*(.*?)(?=Insertion:|Actions:|Action:|אחיזה:|פעולות:|פעולה:|$)/i,
   );
-  const insertion = answer.match(/Insertion:\s*(.*?)(?=Actions:|Action:|$)/i);
-  const action = answer.match(/Actions?:\s*(.*)$/i);
+
+  const insertion = answer.match(
+    /(Insertion|אחיזה):\s*(.*?)(?=Actions:|Action:|פעולות:|פעולה:|$)/i,
+  );
+
+  const action = answer.match(/(Actions|Action|פעולות|פעולה):\s*(.*)$/i);
 
   return {
-    origin: origin ? origin[1].trim() : "",
-    insertion: insertion ? insertion[1].trim() : "",
-    action: action ? action[1].trim() : answer,
+    origin: origin ? origin[2].trim() : "",
+    insertion: insertion ? insertion[2].trim() : "",
+    action: action ? action[2].trim() : answer,
   };
+}
+
+function getTranslatedField(item, fieldName) {
+  if (currentLanguage === "he") {
+    return item[`${fieldName}He`] || item[fieldName] || "";
+  }
+
+  return item[fieldName] || "";
+}
+
+function getAnswerText(item) {
+  if (currentLanguage === "he") {
+    return item.answerHe || item.answer || "";
+  }
+
+  return item.answer || "";
+}
+
+function getLabels() {
+  if (currentLanguage === "he") {
+    return {
+      explanation: "🧠 הסבר:",
+      location: "📍 מיקום:",
+      pathway: "🔄 מסלול / מעבר מידע:",
+      functions: "⚡ תפקידים:",
+      keyStructures: "🧩 מבנים מרכזיים:",
+      influencingFactors: "🧪 גורמים משפיעים:",
+      recommendedExercises: "📚 תרגול מומלץ:",
+
+      origin: "📍 התחלה:",
+      insertion: "🔗 אחיזה:",
+      action: "⚡ פעולה:",
+      exercises: "🏋️ תרגילים מומלצים:",
+    };
+  }
+
+  return {
+    explanation: "🧠 Explanation:",
+    location: "📍 Location:",
+    pathway: "🔄 Pathway:",
+    functions: "⚡ Functions:",
+    keyStructures: "🧩 Key Structures:",
+    influencingFactors: "🧪 Influencing Factors:",
+    recommendedExercises: "📚 Study Practice:",
+
+    origin: "📍 Origin:",
+    insertion: "🔗 Insertion:",
+    action: "⚡ Action:",
+    exercises: "🏋️ Recommended Exercises:",
+  };
+}
+
+function renderTranslateButton() {
+  return `
+    <div class="answer-toolbar">
+      <button id="answerTranslateBtn" class="translate-btn" type="button">
+        ${currentLanguage === "en" ? "עברית" : "English"}
+      </button>
+    </div>
+  `;
 }
 
 function createInfoRow(labelClass, labelText, text) {
   if (!text) return "";
 
   return `
-    <p>
-      <strong class="${labelClass}">${labelText}</strong>
-      <span>${text}</span>
+    <p class="answer-row">
+      <strong class="${labelClass} answer-label">${labelText}</strong>
+      <span class="answer-text">${text}</span>
     </p>
   `;
 }
@@ -69,47 +136,75 @@ function createInfoRow(labelClass, labelText, text) {
 function renderAnswer(item) {
   answerBox.innerHTML = "";
 
+  const labels = getLabels();
+
+  answerBox.setAttribute("dir", currentLanguage === "he" ? "rtl" : "ltr");
+
   if (item.type === "system") {
     answerBox.innerHTML = `
-      ${createInfoRow("origin-label", "🧠 Explanation:", item.explanation)}
+      ${renderTranslateButton()}
 
-      ${createInfoRow("insertion-label", "📍 Location:", item.location)}
-
-      ${createInfoRow("action-label", "🔄 Pathway:", item.pathway)}
-
-      ${createInfoRow("action-label", "⚡ Functions:", item.functions)}
-
-      ${createInfoRow("origin-label", "🧩 Key Structures:", item.keyStructures)}
+      ${createInfoRow(
+        "origin-label",
+        labels.explanation,
+        getTranslatedField(item, "explanation"),
+      )}
 
       ${createInfoRow(
         "insertion-label",
-        "🧪 Influencing Factors:",
-        item.influencingFactors,
+        labels.location,
+        getTranslatedField(item, "location"),
+      )}
+
+      ${createInfoRow(
+        "action-label",
+        labels.pathway,
+        getTranslatedField(item, "pathway"),
+      )}
+
+      ${createInfoRow(
+        "action-label",
+        labels.functions,
+        getTranslatedField(item, "functions"),
+      )}
+
+      ${createInfoRow(
+        "origin-label",
+        labels.keyStructures,
+        getTranslatedField(item, "keyStructures"),
+      )}
+
+      ${createInfoRow(
+        "insertion-label",
+        labels.influencingFactors,
+        getTranslatedField(item, "influencingFactors"),
       )}
 
       ${createInfoRow(
         "exercise-label",
-        "📚 Study Practice:",
-        item.recommendedExercises,
+        labels.recommendedExercises,
+        getTranslatedField(item, "recommendedExercises"),
       )}
     `;
 
     return;
   }
 
-  const parts = splitAnswer(item.answer || "");
+  const parts = splitAnswer(getAnswerText(item));
 
   answerBox.innerHTML = `
-    ${createInfoRow("origin-label", "📍 Origin:", parts.origin)}
+    ${renderTranslateButton()}
 
-    ${createInfoRow("insertion-label", "🔗 Insertion:", parts.insertion)}
+    ${createInfoRow("origin-label", labels.origin, parts.origin)}
 
-    ${createInfoRow("action-label", "⚡ Action:", parts.action)}
+    ${createInfoRow("insertion-label", labels.insertion, parts.insertion)}
+
+    ${createInfoRow("action-label", labels.action, parts.action)}
 
     ${createInfoRow(
       "exercise-label",
-      "🏋️ Recommended Exercises:",
-      item.recommendedExercises || "No exercises listed",
+      labels.exercises,
+      getTranslatedField(item, "recommendedExercises") || "No exercises listed",
     )}
   `;
 }
@@ -142,6 +237,24 @@ resetBtn.addEventListener("click", () => {
   currentIndex = 0;
 
   buildBank();
+});
+
+answerBox.addEventListener("click", (e) => {
+  const translateButton = e.target.closest("#answerTranslateBtn");
+
+  if (!translateButton) return;
+
+  currentLanguage = currentLanguage === "en" ? "he" : "en";
+
+  localStorage.setItem("studyLanguage", currentLanguage);
+
+  const currentItem = currentBank[currentIndex];
+
+  if (currentItem) {
+    renderAnswer(currentItem);
+    answerVisible = true;
+    answerBox.classList.add("show");
+  }
 });
 
 function buildBank() {

@@ -206,6 +206,31 @@ button {
 .random-btn {
   background: linear-gradient(135deg, #3b82f6, #22c55e) !important;
 }
+.answer-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+.translate-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.translate-btn:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.answer-row {
+  line-height: 1.7;
+}
 #topicSelect option {
   color: black;
 }
@@ -213,6 +238,50 @@ button {
   background: linear-gradient(135deg, #ef4444, #dc2626) !important;
 
   color: white;
+}
+.answer-box {
+  unicode-bidi: plaintext;
+}
+
+.answer-row {
+  display: block;
+  margin: 0 0 18px;
+  line-height: 1.75;
+}
+
+.answer-label {
+  display: block !important;
+  margin-bottom: 6px;
+  font-weight: 800;
+}
+
+.answer-text {
+  display: block !important;
+  unicode-bidi: plaintext;
+}
+
+.answer-box[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+.answer-box[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+.answer-box[dir="rtl"] .answer-row,
+.answer-box[dir="rtl"] .answer-label,
+.answer-box[dir="rtl"] .answer-text {
+  direction: rtl;
+  text-align: right;
+}
+
+.answer-box[dir="ltr"] .answer-row,
+.answer-box[dir="ltr"] .answer-label,
+.answer-box[dir="ltr"] .answer-text {
+  direction: ltr;
+  text-align: left;
 }
 
 .reset-btn:hover {
@@ -262,6 +331,16 @@ button:hover {
 
   .hero h1 {
     line-height: 1.15;
+  }
+  .answer-row {
+    margin: 0 0 16px;
+    line-height: 1.75;
+  }
+
+  .answer-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 800;
   }
 
   .filter-bar {
