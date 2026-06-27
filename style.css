@@ -43,22 +43,79 @@ body {
   font-size: clamp(15px, 2vw, 20px);
 }
 
+/* בחירת נושא */
+.topic-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#topicSelect {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 16px;
+  min-width: 280px;
+  cursor: pointer;
+}
+
+#topicSelect option {
+  color: black;
+}
+
+/* כפתורי סינון */
 .filter-bar {
   display: flex;
-  gap: 10px;
   justify-content: center;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
   flex-wrap: wrap;
+  margin: 24px 0;
 }
 
 .filter-bar button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 18px;
   background: rgba(255, 255, 255, 0.12);
   color: white;
-  padding: 12px 20px;
-  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
   font-size: clamp(14px, 2vw, 17px);
 }
 
+.filter-bar button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.random-btn {
+  background: linear-gradient(135deg, #3b82f6, #22c55e) !important;
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: white;
+}
+
+.reset-btn:hover {
+  transform: translateY(-1px);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* כרטיס */
 .card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -77,13 +134,25 @@ body {
   margin-bottom: 15px;
 }
 
+/* שם השריר / שם הפריט */
 #muscleName {
   text-align: center;
   font-size: clamp(30px, 6vw, 52px);
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
+/* תת כותרת חדשה */
+.sub-title {
+  text-align: center;
+  font-size: clamp(18px, 3vw, 28px);
+  color: #9fd3ff;
+  font-weight: 700;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+/* תמונה */
 .image-box {
   width: 100%;
   height: clamp(320px, 60vh, 680px);
@@ -102,114 +171,98 @@ body {
   object-fit: contain;
 }
 
+/* תשובה */
 .answer-box {
   display: none;
-  direction: ltr;
-  text-align: left;
   background: rgba(0, 0, 0, 0.25);
   padding: clamp(16px, 3vw, 22px);
   border-radius: 16px;
   line-height: 1.8;
   font-size: clamp(16px, 2.3vw, 21px);
   margin-bottom: 20px;
+  unicode-bidi: plaintext;
 }
 
 .answer-box.show {
   display: block;
 }
 
-.answer-box p {
-  margin: 12px 0;
+.answer-box[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+.answer-box[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+.answer-row {
+  display: block;
+  margin: 0 0 22px;
+  line-height: 1.75;
+}
+
+.answer-label {
+  display: block !important;
+  margin-bottom: 6px;
+  font-weight: 800;
+  font-size: 1.15em;
+}
+
+.answer-text {
+  display: block !important;
+  unicode-bidi: plaintext;
+}
+
+.answer-box[dir="rtl"] .answer-row,
+.answer-box[dir="rtl"] .answer-label,
+.answer-box[dir="rtl"] .answer-text {
+  direction: rtl;
+  text-align: right;
+}
+
+.answer-box[dir="ltr"] .answer-row,
+.answer-box[dir="ltr"] .answer-label,
+.answer-box[dir="ltr"] .answer-text {
+  direction: ltr;
+  text-align: left;
+}
+
+/* צבעים לפי סוג מידע */
+.description-label {
+  color: #ffd166;
 }
 
 .origin-label {
   color: #4fc3f7;
-  font-size: 1.15em;
-  font-weight: 700;
 }
 
 .insertion-label {
   color: #81c784;
-  font-size: 1.15em;
-  font-weight: 700;
 }
 
 .action-label {
   color: #ffb74d;
-  font-size: 1.15em;
-  font-weight: 700;
 }
 
 .exercise-label {
   color: #ba68c8;
-  font-size: 1.15em;
-  font-weight: 700;
 }
 
-button {
-  border: none;
-  cursor: pointer;
-  transition: 0.2s ease;
-  border-radius: 14px;
-  font-weight: bold;
-}
-
-.topic-selector {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-#topicSelect {
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 12px 18px;
-  border-radius: 14px;
-  font-size: 16px;
-  min-width: 280px;
-  cursor: pointer;
-}
-.filter-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 24px 0;
-}
-
-.filter-bar button {
-  border: none;
-  border-radius: 12px;
-  padding: 10px 18px;
-  background: rgba(255, 255, 255, 0.12);
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.filter-bar button:hover {
-  background: rgba(255, 255, 255, 0.22);
-}
-.status-dot {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: inline-block;
-
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.35);
-
-  transition: all 0.25s ease;
-}
-.random-btn {
-  background: linear-gradient(135deg, #3b82f6, #22c55e) !important;
-}
+/* אזור כפתור תרגום */
 .answer-toolbar {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.answer-box[dir="rtl"] .answer-toolbar {
+  justify-content: flex-start;
+}
+
+.answer-box[dir="ltr"] .answer-toolbar {
+  justify-content: flex-start;
 }
 
 .translate-btn {
@@ -228,69 +281,22 @@ button {
   background: rgba(255, 255, 255, 0.24);
 }
 
-.answer-row {
-  line-height: 1.7;
-}
-#topicSelect option {
-  color: black;
-}
-.reset-btn {
-  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
-
-  color: white;
-}
-.answer-box {
-  unicode-bidi: plaintext;
+/* נקודת רמת קושי */
+.status-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  transition: all 0.25s ease;
 }
 
-.answer-row {
-  display: block;
-  margin: 0 0 18px;
-  line-height: 1.75;
+#levelBadge {
+  font-weight: bold;
 }
 
-.answer-label {
-  display: block !important;
-  margin-bottom: 6px;
-  font-weight: 800;
-}
-
-.answer-text {
-  display: block !important;
-  unicode-bidi: plaintext;
-}
-
-.answer-box[dir="rtl"] {
-  direction: rtl;
-  text-align: right;
-}
-
-.answer-box[dir="ltr"] {
-  direction: ltr;
-  text-align: left;
-}
-
-.answer-box[dir="rtl"] .answer-row,
-.answer-box[dir="rtl"] .answer-label,
-.answer-box[dir="rtl"] .answer-text {
-  direction: rtl;
-  text-align: right;
-}
-
-.answer-box[dir="ltr"] .answer-row,
-.answer-box[dir="ltr"] .answer-label,
-.answer-box[dir="ltr"] .answer-text {
-  direction: ltr;
-  text-align: left;
-}
-
-.reset-btn:hover {
-  transform: translateY(-1px);
-}
-button:hover {
-  transform: translateY(-2px);
-}
-
+/* פס התקדמות */
 .progress-container {
   width: 100%;
   height: 12px;
@@ -305,10 +311,6 @@ button:hover {
   height: 100%;
   background: #1eb8f7;
   transition: width 0.3s ease;
-}
-
-#levelBadge {
-  font-weight: bold;
 }
 
 /* טאבלט */
@@ -332,15 +334,10 @@ button:hover {
   .hero h1 {
     line-height: 1.15;
   }
-  .answer-row {
-    margin: 0 0 16px;
-    line-height: 1.75;
-  }
 
-  .answer-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 800;
+  .sub-title {
+    font-size: 20px;
+    margin-bottom: 18px;
   }
 
   .filter-bar {
@@ -368,6 +365,17 @@ button:hover {
 
   .answer-box {
     font-size: 16px;
+  }
+
+  .answer-row {
+    margin: 0 0 16px;
+    line-height: 1.75;
+  }
+
+  .answer-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 800;
   }
 }
 

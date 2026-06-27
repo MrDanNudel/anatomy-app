@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>לימוד שרירים</title>
+    <title>לימוד אנטומיה</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -11,7 +11,8 @@
     <main class="app">
       <header class="hero">
         <h1>לימוד ושינון אנטומיה</h1>
-        <p>שרירים • עצמות • רצועות</p>
+        <p>שרירים • עצמות • רצועות • מערכות גוף</p>
+
         <div class="topic-selector">
           <select id="topicSelect">
             <option value="general">כללי</option>
@@ -43,37 +44,22 @@
 
       <section class="card">
         <div class="top-row">
-          <span id="progressText">שריר 1 מתוך 1</span>
+          <span id="progressText">פריט 1 מתוך 1</span>
           <span id="levelBadge" class="status-dot"></span>
         </div>
 
-        <h2 id="muscleName">שם השריר</h2>
+        <h2 id="muscleName">שם הפריט</h2>
+
+        <!-- תת־כותרת דינמית לפי סוג המאגר / type -->
+        <!-- לדוגמה: שם השריר בעברית, מערכת אנטומית, עצם, רצועה וכו׳ -->
+        <h3 id="subTitle" class="sub-title"></h3>
 
         <div class="image-box">
-          <img id="muscleImage" src="" alt="תמונה של שריר" />
+          <img id="muscleImage" src="" alt="תמונה אנטומית" />
         </div>
 
-        <div id="answerBox" class="answer-box">
-          <p>
-            <strong class="origin-label">📍 Origin:</strong>
-            <span id="originText"></span>
-          </p>
-
-          <p>
-            <strong class="insertion-label">🔗 Insertion:</strong>
-            <span id="insertionText"></span>
-          </p>
-
-          <p>
-            <strong class="action-label">⚡ Action:</strong>
-            <span id="actionText"></span>
-          </p>
-
-          <p>
-            <strong class="exercise-label">🏋️ Recommended Exercises:</strong>
-            <span id="exerciseText"></span>
-          </p>
-        </div>
+        <!-- כאן התשובה תיבנה דרך JavaScript לפי type -->
+        <div id="answerBox" class="answer-box"></div>
       </section>
 
       <div class="progress-container">
