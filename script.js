@@ -7,6 +7,8 @@ const banks = {
   respiratorySystem: respiratorySystemData,
   nervousSystem: nervousSystemData,
   circulatorySystem: circulatorySystemData,
+  upperBodyData: upperBodyData,
+  upperBodyMuscles: upperBodyMusclesData,
 };
 
 let isRandomMode = false;
